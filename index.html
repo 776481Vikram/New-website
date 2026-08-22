@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VikMart - E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">VikMart</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cart">
+            🛒 Cart <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Shop Smart. Shop Better. </h1>
+            <p>Discover amazing products at the best prices.</p>
+            <button onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+            onkeyup="searchProducts()"
+        >
+    </section>
+
+    <!-- Products -->
+    <main id="products">
+
+        <h2>Our Products</h2>
+
+        <div class="product-container" id="product-container">
+
+            <div class="product" data-name="Wireless Headphones">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Headphones">
+
+                <h3>Wireless Headphones</h3>
+                <p>Premium wireless headphones.</p>
+
+                <h4>₹2,499</h4>
+
+                <button onclick="addToCart('Wireless Headphones', 2499)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product" data-name="Smart Watch">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Smart Watch">
+
+                <h3>Smart Watch</h3>
+                <p>Track your fitness and notifications.</p>
+
+                <h4>₹3,999</h4>
+
+                <button onclick="addToCart('Smart Watch', 3999)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product" data-name="Running Shoes">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Running Shoes">
+
+                <h3>Running Shoes</h3>
+                <p>Comfortable shoes for everyday running.</p>
+
+                <h4>₹1,999</h4>
+
+                <button onclick="addToCart('Running Shoes', 1999)">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product" data-name="Backpack">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62" alt="Backpack">
+
+                <h3>Travel Backpack</h3>
+                <p>Stylish and durable travel backpack.</p>
+
+                <h4>₹1,499</h4>
+
+                <button onclick="addToCart('Travel Backpack', 1499)">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Cart -->
+    <section class="cart-section">
+
+        <h2>Your Cart</h2>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <h3>Total: ₹<span id="cart-total">0</span></h3>
+
+        <button class="checkout" onclick="checkout()">
+            Checkout
+        </button>
+
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>About VikMart</h2>
+        <p>
+            VikMart is a simple e-commerce website created using
+            HTML, CSS and JavaScript.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>VikMart</h3>
+        <p>Email: support@vikmart.com</p>
+        <p>© 2026 VikMart. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
